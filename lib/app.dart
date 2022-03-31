@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_complete_guide/providers/orders.dart';
 import 'package:flutter_complete_guide/screens/cart_screen.dart';
+import 'package:flutter_complete_guide/screens/order_screen.dart';
 import 'package:provider/provider.dart';
 import '../providers/cart.dart';
 import '../providers/products.dart';
@@ -30,13 +31,14 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.orange,
           colorScheme: ColorScheme.fromSwatch().copyWith(
             primary: Colors.cyan,
-            secondary: Colors.amberAccent,
+            secondary: Colors.red,
           ),
         ),
         home: MyHomePage(),
         routes: {
           ProductDetailScreen.routeName: (context) => ProductDetailScreen(),
           CartScreen.routeName: (context) => CartScreen(),
+          OrderScreen.routeName: (context) => OrderScreen(),
         },
       ),
     );
