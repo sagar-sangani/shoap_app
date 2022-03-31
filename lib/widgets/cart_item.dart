@@ -37,7 +37,7 @@ class CartItemWidget extends StatelessWidget {
         ),
       ),
       onDismissed: (direction) {
-        Provider.of<Cart>(context, listen: false).removeitem(productId);
+        Provider.of<Cart>(context, listen: false).removeItem(productId);
       },
       child: Card(
         margin: EdgeInsets.symmetric(
@@ -57,7 +57,7 @@ class CartItemWidget extends StatelessWidget {
             ),
             title: Text(title),
             subtitle: Text(
-              'Total : \$${(price * quantity)}',
+              'Total : \$${(double.parse((price * quantity).toStringAsFixed(2)))}',
             ),
             trailing: Text('$quantity x'),
           ),
