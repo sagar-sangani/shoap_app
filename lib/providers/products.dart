@@ -65,10 +65,10 @@ class Products with ChangeNotifier {
   //   notifyListeners();
   // }
 
-  void addProduct(Product product) {
+  Future<void> addProduct(Product product) {
     final url = Uri.parse(
-        'https://meal-app2022-default-rtdb.firebaseio.com/ products.json');
-    http
+        'https://meal-app2022-default-rtdb.firebaseio.com/products.json');
+    return http
         .post(
       url,
       body: json.encode({
@@ -89,6 +89,9 @@ class Products with ChangeNotifier {
       );
       _items.add(newProduct);
       notifyListeners();
+    }).catchError((error) {
+      print(error);
+      throw error;
     });
   }
 
