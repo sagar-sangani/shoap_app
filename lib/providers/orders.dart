@@ -48,8 +48,11 @@ class Orders with ChangeNotifier {
       OrderItem(
         id: json.decode(response.body)['name'],
         amount: total,
+        dateTime: timesamp,
+        products: cartProducts,
       ),
     );
+
     notifyListeners();
   }
 }
