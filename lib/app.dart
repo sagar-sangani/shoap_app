@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_complete_guide/providers/orders.dart';
+import 'package:flutter_complete_guide/screens/auth_screen.dart';
 import 'package:flutter_complete_guide/screens/cart_screen.dart';
 import 'package:flutter_complete_guide/screens/edit_product_screen.dart';
 import 'package:flutter_complete_guide/screens/order_screen.dart';
@@ -8,7 +9,6 @@ import 'package:provider/provider.dart';
 import '../providers/cart.dart';
 import '../providers/products.dart';
 import '../screens/product_detail_screen.dart';
-import './view/home_view.dart';
 
 class MyApp extends StatelessWidget {
   @override
@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
             secondary: Colors.red,
           ),
         ),
-        home: MyHomePage(),
+        home: AuthScreen(),
         routes: {
           ProductDetailScreen.routeName: (context) => ProductDetailScreen(),
           CartScreen.routeName: (context) => CartScreen(),
