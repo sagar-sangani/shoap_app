@@ -37,7 +37,7 @@ class Orders with ChangeNotifier {
       loadedOrders.add(OrderItem(
           id: orderId,
           amount: orderData['amount'],
-          products: (orderData['products'] as List<dynamic>)
+          products: (orderData['product'] as List<dynamic>)
               .map((item) => CartItem(
                   title: item['title'],
                   quantity: item['quantity'],
