@@ -92,6 +92,7 @@ class Products with ChangeNotifier {
       _items = loadedProducts;
       notifyListeners();
     } catch (error) {
+      print(error);
       throw error;
     }
   }
