@@ -41,6 +41,7 @@ class ProductDetailScreen extends StatelessWidget {
                     color: Colors.grey,
                     fontSize: 20,
                   ),
+                  textAlign: TextAlign.center,
                 ),
                 Container(
                   width: double.infinity,

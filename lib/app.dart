@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_complete_guide/helpers/custom_route.dart';
 import 'package:flutter_complete_guide/providers/auth.dart';
 import 'package:flutter_complete_guide/providers/orders.dart';
 import 'package:flutter_complete_guide/screens/auth_screen.dart';
@@ -49,6 +50,12 @@ class MyApp extends StatelessWidget {
             colorScheme: ColorScheme.fromSwatch().copyWith(
               primary: Colors.cyan,
               secondary: Colors.red,
+            ),
+            pageTransitionsTheme: PageTransitionsTheme(
+              builders: {
+                TargetPlatform.android: CustomPageTransitionBuilder(),
+                TargetPlatform.iOS: CustomPageTransitionBuilder(),
+              },
             ),
           ),
           home: auth.isAuth
